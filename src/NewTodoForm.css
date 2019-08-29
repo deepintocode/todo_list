@@ -28,6 +28,12 @@
   transition: all 0.2s;
 }
 
+.NewTodoForm-button:focus {
+  outline: none;
+  background-color: #FEFCFD;
+  color: #3B3355;
+}
+
 .NewTodoForm-button:hover {
   background-color: #FEFCFD;
   color: #3B3355;
