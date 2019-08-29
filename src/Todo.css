@@ -1,0 +1,86 @@
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.Todo__task--completed {
+  opacity: 0.6;
+  transform: scale(0.8);
+}
+
+.Todo__task,
+.Todo__task--completed {
+  position: relative;
+  font-size: 1.6rem;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.Todo__task--completed::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -0.5rem;
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  animation: strikethrough 0.5s ease-out 0s forwards;
+}
+
+.Todo__buttons {
+  margin-left: auto;
+}
+
+.Todo__buttons > * {
+  border: none;
+  font-size: 2rem;
+  color: #FEFCFD;
+  background: none;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.Todo__buttons > *:hover {
+  color: #3B3355;
+}
+
+.Todo__edit-form {
+  display: flex;
+}
+
+.Todo__edit-form-input {
+  flex-grow: 1;
+  border: none;
+  background-color: #FEFCFD;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+}
+
+.Todo__edit-form-button {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #3B3355;
+  cursor: pointer;
+  color: #FEFCFD;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-left: 1rem;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.Todo__edit-form-button:hover {
+  background-color: #FEFCFD;
+  color: #3B3355;
+}
+
+@keyframes strikethrough {
+  to {
+    width: calc(100% + 1rem);  
+  }
+}
